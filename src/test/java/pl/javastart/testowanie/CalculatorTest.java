@@ -32,6 +32,6 @@ class CalculatorTest {
         int result = calculator.add(a, b);
 
         //then
-        Assertions.assertEquals(5, result);
+        Assertions.assertEquals(result, 5);
     }
 }
