@@ -20,7 +20,7 @@ class JUnitMultipleAssertionsTest {
         assertThat(hulk.getPublisher()).isEqualTo("Marvel");
     }
 
-    //Junit5
+    //Junit5 & AssertJ
     @Test
     void multipleAssertionsTogetherWithJunit5andAssertJ() {
         Superhero hulk = Superheros.getHulk();
@@ -31,6 +31,7 @@ class JUnitMultipleAssertionsTest {
         );
     }
 
+    //Junit5
     @Test
     void multipleAssertionsTogetherWithAssertJ() {
         Superhero hulk = Superheros.getHulk();
