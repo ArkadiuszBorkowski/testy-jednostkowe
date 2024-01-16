@@ -4,7 +4,7 @@ import java.time.YearMonth;
 
 public class MonthCalculator {
 
-    int getDayCount(int year, int month) {
+    public int getDayCount(int year, int month) {
 
         switch(month) {
             case 1:
