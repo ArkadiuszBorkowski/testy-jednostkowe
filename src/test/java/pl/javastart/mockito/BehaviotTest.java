@@ -36,4 +36,21 @@ public class BehaviotTest {
         assertThat(user.getName()).isEqualTo("Krysia");
     }
 
+    @Test
+    public void shouldAlwaysReturnGivenNameLazyWay() {
+        User user = Mockito.mock(User.class);
+
+        Mockito.when(user.getName()).then(i -> {
+            System.out.println("Liczenie wartości wynikowej");
+            return "Kasia";
+        });
+
+        System.out.println("Zaraz będę sprawdzał po raz #1");
+        assertThat(user.getName()).isEqualTo("Kasia");
+        System.out.println("Zaraz będę sprawdzał po raz #2");
+        assertThat(user.getName()).isEqualTo("Kasia");
+        System.out.println("Zaraz będę sprawdzał po raz #3");
+        assertThat(user.getName()).isEqualTo("Kasia");
+    }
+
 }
